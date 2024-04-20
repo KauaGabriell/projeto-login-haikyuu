@@ -1,0 +1,175 @@
+@charset "UTF-8";
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap');
+/*Mobile First*/
+
+/*Cores
+
+COR 01 - #2E3140 (Azul Marinho)
+COR 02 - #333640 (Cinza/Azul Escuro)
+COR 03 - #F28B30 (Laranja)
+COR 04 - #F28241 (Laranja escuro)
+COR 05 - #F2F1F0 (Branco)
+*/
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body *{
+    box-sizing: border-box;
+    overflow-x: hidden;
+}
+
+:root{
+    --cor01: #2E3140;
+    --cor02: #333640;
+    --cor03: #F28B30;
+    --cor04: #F28241;
+    --cor05: #F2F1F0;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+}
+
+.box-main{
+    width: 100vw;
+    height: 100vh;
+    background-color: var(--cor02);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.img-left{
+    width: 45%;
+    transform: translateY(0px);
+    animation: float 5s ease-in-out infinite
+}
+
+@keyframes float {
+    0%{
+        transform: translateY(0px);
+    }
+
+    30%{
+        transform: translateY(-30px);
+    }
+
+    100%{
+        transform: translateY(0px);
+    }
+}
+
+.box-left{
+    width: 50vw;
+    height: 100vh;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.box-left > h1{
+    color: var(--cor05);
+    font-family: 'Hai';
+}
+
+.box-right{
+    width: 30vw;
+    height: 70vh;
+    background-color: var(--cor01);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    border-radius: 20px;
+    box-shadow: 0px 10px 20px rgba(0, 0, 0, 0.267);
+}
+
+.card{
+    width: 80%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    border-radius: 20px;
+    padding: 30px 35px;
+    
+}
+
+.card >h1{
+    font-family: 'Inter';
+    color: var(--cor04);
+    margin: 0;
+}
+
+.AT{
+    margin: 10px 0px;
+}
+
+.AT > form> input{
+    margin-top: 8px;
+    width: 100%;
+    padding: 15px;
+    border-radius: 12px;
+    outline: none;
+    border: none;
+    background-color: var(--cor05);
+    box-shadow: 0px 10px 40px rgba(0, 0, 0, 0.418);
+    font-size: 12pt;
+}
+
+
+.AT > form > label{
+    color: white;
+}
+
+#btn-login{
+    width: 100%;
+    background-color: var(--cor03);
+    margin-top: 40px;
+    color: var(--cor05);
+}
+
+#btn-login:hover{
+    cursor: pointer;
+}
+
+@media screen and (max-width:950px) {
+    .card{
+        width: 85%;
+    }
+}
+
+@media screen and (max-width:600px) {
+    .box-main{
+        flex-direction: column;
+    }
+
+    .box-left > h1{
+        display: none;
+    }
+
+    .box-left{
+        width: 100%;
+        height: auto;
+    }
+
+    .box-left > img{
+        width: 50vw;
+    }
+
+    .box-right{
+        width: 90vw;
+        height: auto;
+    }
+
+    .card{
+        width: 90%;
+    }
+    
+}
