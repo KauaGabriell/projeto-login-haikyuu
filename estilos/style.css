@@ -153,21 +153,17 @@ body *{
     .box-left > h1{
         display: none;
     }
-
     .box-left{
         width: 100%;
         height: auto;
     }
-
     .box-left > img{
         width: 50vw;
     }
-
     .box-right{
         width: 90vw;
         height: auto;
     }
-
     .card{
         width: 90%;
     }
